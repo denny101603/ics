@@ -61,15 +61,7 @@ Zde je vidět jméno uživatele, jeho poslední aktivita a jeho týmy.
 
 Projekt řeší studenti v týmech. V každém týmu je **4-5 studentů**. *Tým o méně studentech není přípustný.*
 
-Při řešení projektu týmy využívají Azure DevOps a využívají GIT na sdílení kódu. Do svého projektu přidělte přístup vyučujícím (způsob bude vysvětlen v rámci 1. cvičení); tj. do Vašeho týmového projektu si v části Members přidejte účet **uciteliw5@vutbr.cz**
-
-Účet **uciteliw5@vutbr.cz** budou používat vyučující pro přístup k odevzdávaným souborům. Bez přidání tohoto účtu není možné přistoupit k vašemu projektu a tedy není možné jej ze strany vyučujících hodnotit.
-
-Návod na přidání člena projektu můžete najít zde: *https://docs.microsoft.com/en-us/vsts/accounts/add-team-members-vs*
-
-Z GITu *musí být viditelná postupná práce na projektu a spolupráce týmu*. Pokud uvidíme, že existuje malé množství nelogických a nepřeložitelných commitů tak nás bude zajímat, jak jste spolupracovali a může to vést na snížení bodového hodnocení. Organizaci pojmenujte **ics-2019-team<0000>** dle Vašeho čísla týmu a projekt **project** tak, že výsledné URL pro přístup pro tento imaginární tým by bylo https://dev.azure.com/ics-2019-team0000/project. Nezapomeňte nastavit **Work item process** template na **Scrum**.
-
-Pokud projekt vypracováváte pro oba předměty ICS/IW5, zvolte jméno organizace **ics-iw5-2019-team<0000>**, viz [#6](https://github.com/FitIW/5/issues/6).
+Při řešení projektu týmy využívají Azure DevOps a využívají GIT na sdílení kódu. Do svého projektu přidělte přístup vyučujícím (způsob bude vysvětlen v rámci 1. cvičení)
 
 ### Řízení projektu
 
