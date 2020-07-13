@@ -1,0 +1,43 @@
+<local:UserControlBase x:Class="ICS_team_4615.App.Views.FindView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICS_team_4615.App.Views"
+        xmlns:viewModels="clr-namespace:ICS_team_4615.App.ViewModels"
+        mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"    
+        d:DataContext="{d:DesignInstance viewModels:TeamViewModel}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=TeamViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" FontSize="20" Content="{Binding FindingText}"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl x:Name="Posts" ItemsSource="{Binding FoundViewModels}" HorizontalContentAlignment="Stretch">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Grid.RowSpan="2" BorderThickness="1" BorderBrush="LightBlue" CornerRadius="5"/>
+                            <StackPanel Grid.Row="1">
+                                <local:PostView/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <Button Grid.Row="2" Grid.Column="0" Content="Cancel" Command="{Binding CancelCommand}" Background="Red"/>
+    </Grid>
+</local:UserControlBase>

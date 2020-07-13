@@ -1,0 +1,33 @@
+﻿<local:UserControlBase x:Class="ICS_team_4615.App.Views.CreateTeamView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICS_team_4615.App.Views"
+        xmlns:viewModels="clr-namespace:ICS_team_4615.App.ViewModels"
+        mc:Ignorable="d" Height="200" Width="300"
+        d:DataContext="{d:DesignInstance viewModels:TeamViewModel}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="16"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=TeamViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Description:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="TeamName" Text="{Binding CreateName}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TeamDesc" VerticalScrollBarVisibility="Auto" Text="{Binding CreateDescription}" 
+                 HorizontalScrollBarVisibility="Disabled" VerticalAlignment="Top" TextWrapping="Wrap"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="Cancel" Command="{Binding CancelCommand}" Background="Red"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Create" Command="{Binding CreateCommand}"/>
+    </Grid>
+</local:UserControlBase>
